@@ -1,9 +1,10 @@
 name: scrape
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/10 * * * *'
 jobs:
-  scrape_bbc:
+  scrape:
     runs-on: ubuntu-latest
     steps:
       - name: Check out this repo
